@@ -1,0 +1,34 @@
+nav {
+  width: 100%;
+  height: 10vh;
+  background-color: #E8A0BF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .img {
+  height: 10vh;
+  width: 50px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+nav .img img {
+  height: 8vh;
+}
+nav .alt {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 10vh;
+  width: 35%;
+}
+nav .alt p {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 600;
+  color: rgb(247, 247, 247);
+  cursor: pointer;
+}/*# sourceMappingURL=Navbar.css.map */
