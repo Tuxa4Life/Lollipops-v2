@@ -1,35 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { storage } from '../firebase'
-import { ref, listAll, getDownloadURL } from 'firebase/storage'
+import React from "react";
 import styles from '../assets/styles/Navbar.css'
 
 
 const Navbar = () => {
-    const [logo, setLogo] = useState('')
-    
-    const imageListRef = ref(storage, 'Logos/')
-    useEffect(() => {
-        listAll(imageListRef).then(
-            (response) => {
-                response.items.forEach(item => {
-                    getDownloadURL(item).then(url => {
-                        setLogo(url)
-                    })
-                })
-            }
-        )
-    }, [])
 
     return (
         <nav style={styles}>
             <div className="img">
-                <img src={logo} alt="Loading..." />
+                <img src={'https://firebasestorage.googleapis.com/v0/b/lollipops-14.appspot.com/o/Logos%2Flogo.png?alt=media&token=ef32bceb-685c-42e7-ad5c-009927ec4427'} alt="Loading..." />
             </div>
 
             <div className="alt">
-                <p>კონტაქტი</p>
-                <p>ლოკაცია</p>
-                <p>T: 599 752 777</p>
+                <i className="user icon"></i>
             </div>
         </nav>
     )

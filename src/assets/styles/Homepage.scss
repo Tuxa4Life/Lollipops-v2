@@ -4,5 +4,144 @@ main {
     
     .first-row {
         width: 100%;
+        height: 70vh;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .header {
+            width: 30%;
+            margin-left: 15%;
+
+            h1 {
+                color: #774785;
+                font-size: 48px;
+                padding: 0;
+            }
+            h3 {
+                color: #BA90C6;
+            }
+        }
+
+        .images {
+            width: 50%;
+            height: 100%;
+            .l-images {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                img {
+                    width: 50%;
+                    border: 5px rgb(253, 186, 255) solid;
+                    border-radius: 7px;
+                    position: absolute;
+
+                }
+                img:first-child {
+                    top: 55%;
+                    left: 20%;
+                    rotate: 5deg;
+                }
+                img:last-child {
+                    top: 20%;
+                    left: 0;
+                    rotate: -15deg;
+                }
+            }
+        }
+    }
+
+
+
+    .second-row {
+        margin-top: 20vh;
+        width: 100%;
+        height: 20vh;
+        
+        display:  flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        background-color: #E8A0BF;
+
+        h2 {
+            font-size: 28px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .third-row {
+        height: auto;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        margin-top: 10vh;
+
+        .icon-wrapper {
+            width: 100%;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            margin-top: 10vh;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+                p {
+                    font-size: 18px;
+                    text-align: center;
+                    margin: 20px 0;
+                }
+
+                img {
+                    max-width: 300px;
+                }
+            }
+
+            div:last-child {
+                img {
+                    height: 305px;
+                }
+            }
+        }
+    }
+
+    .image-container {
+        margin: 20vh 0;
+        width: 100%;
+        height: auto;
+        
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            width: 100%;
+            text-align: center;
+        }
+
+        .img-wrapper {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                margin: 5px;
+                width: 250px;
+            }
+        }
     }
 }
