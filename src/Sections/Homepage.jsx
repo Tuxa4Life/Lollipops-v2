@@ -34,7 +34,7 @@ const Homepage = () => {
                     </div>
                     <div className="item-three">
                         <img src="https://firebasestorage.googleapis.com/v0/b/lollipops-14.appspot.com/o/Homepage_Images%2Fcamera-removebg-preview.png?alt=media&token=8c208ef6-96a5-44ed-9b9a-ac521781ab98" alt="" />
-                        <p>სწრაფი ფოტოსესია</p>
+                        <p>სწრაფი და ხარისხიანი ფოტოსესია</p>
                     </div>
                 </div>
             </section>

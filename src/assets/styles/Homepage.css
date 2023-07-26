@@ -9,9 +9,23 @@ main .first-row {
   align-items: center;
   justify-content: space-evenly;
 }
+@media (max-width: 768px) {
+  main .first-row {
+    flex-direction: column;
+    margin-top: 10vh;
+    position: relative;
+  }
+}
 main .first-row .header {
   width: 30%;
   margin-left: 15%;
+}
+@media (max-width: 768px) {
+  main .first-row .header {
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+  }
 }
 main .first-row .header h1 {
   color: #774785;
@@ -24,6 +38,11 @@ main .first-row .header h3 {
 main .first-row .images {
   width: 50%;
   height: 100%;
+}
+@media (max-width: 768px) {
+  main .first-row .images {
+    display: none;
+  }
 }
 main .first-row .images .l-images {
   width: 100%;
@@ -59,17 +78,34 @@ main .second-row {
 main .second-row h2 {
   font-size: 28px;
 }
+@media (max-width: 768px) {
+  main .second-row h2 {
+    font-size: 22px;
+  }
+}
 main .second-row p {
   font-size: 16px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  main .second-row p {
+    font-size: 12px;
+    padding: 0 5px;
+  }
 }
 main .third-row {
   height: auto;
   width: 100%;
+  margin-top: 5vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 10vh;
+}
+@media (max-width: 768px) {
+  main .third-row {
+    height: 100vh;
+  }
 }
 main .third-row .icon-wrapper {
   width: 100%;
@@ -78,6 +114,12 @@ main .third-row .icon-wrapper {
   align-items: center;
   justify-content: space-evenly;
   margin-top: 10vh;
+}
+@media (max-width: 768px) {
+  main .third-row .icon-wrapper {
+    margin-top: 30vh;
+    flex-direction: column;
+  }
 }
 main .third-row .icon-wrapper div {
   display: flex;
@@ -93,13 +135,27 @@ main .third-row .icon-wrapper div p {
 main .third-row .icon-wrapper div img {
   max-width: 300px;
 }
+@media (max-width: 768px) {
+  main .third-row .icon-wrapper div img {
+    max-width: 100px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
 main .third-row .icon-wrapper div:last-child img {
   height: 305px;
+}
+@media (max-width: 768px) {
+  main .third-row .icon-wrapper div:last-child img {
+    height: auto !important;
+  }
 }
 main .image-container {
   margin: 20vh 0;
   width: 100%;
   height: auto;
+  background: pink;
+  padding: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -116,4 +172,9 @@ main .image-container .img-wrapper {
 main .image-container .img-wrapper img {
   margin: 5px;
   width: 250px;
+}
+@media (max-width: 768px) {
+  main .image-container .img-wrapper img {
+    width: 25%;
+  }
 }/*# sourceMappingURL=Homepage.css.map */

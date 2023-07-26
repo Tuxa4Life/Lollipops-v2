@@ -5,6 +5,11 @@ footer {
   display: flex;
   flex-wrap: wrap;
 }
+@media (max-width: 529px) {
+  footer {
+    height: 90vh;
+  }
+}
 footer .links {
   height: 90%;
   width: 40%;
@@ -12,6 +17,12 @@ footer .links {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+@media (max-width: 529px) {
+  footer .links {
+    height: unset;
+    width: 100%;
+  }
 }
 footer .links h2 {
   width: 50%;
@@ -33,8 +44,19 @@ footer .location {
   justify-content: center;
   flex-direction: column;
 }
+@media (max-width: 529px) {
+  footer .location {
+    height: unset;
+    width: 100%;
+  }
+}
 footer .location a {
   width: 40%;
+}
+@media (max-width: 529px) {
+  footer .location a {
+    width: 80%;
+  }
 }
 footer .location a img {
   width: 100%;
@@ -51,6 +73,11 @@ footer .credit {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 529px) {
+  footer .credit {
+    height: unset;
+  }
 }
 footer .credit i {
   margin-left: 3px;
