@@ -12,7 +12,7 @@ const Footer = () => {
                 </ul>
             </div>
             <div className="location">
-                <a href="https://firebasestorage.googleapis.com/v0/b/lollipops-14.appspot.com/o/Footer%2FLocation.jpg?alt=media&token=63f8c28e-fde5-4557-8d9f-10ea652d6c50" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/lollipops-14.appspot.com/o/Footer%2FLocation.jpg?alt=media&token=63f8c28e-fde5-4557-8d9f-10ea652d6c50" alt="Image not found" /></a>
+                <a href="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Footer%2FLocation.jpg?alt=media&token=929552e1-ef88-421b-8286-8627e4dfc894" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Footer%2FLocation.jpg?alt=media&token=929552e1-ef88-421b-8286-8627e4dfc894" alt="Image not found" /></a>
                 <p>ქალაქ რუსთავი, მესხიშვილის 9</p>
             </div>
             <div className="credit">

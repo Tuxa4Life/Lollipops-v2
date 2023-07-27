@@ -1,0 +1,29 @@
+.admin-panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px black solid;
+  border-radius: 5px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.admin-panel .inputs {
+  display: flex;
+  flex-direction: column;
+}
+.admin-panel .inputs input {
+  width: 300px;
+  margin: 5px 0;
+}
+.admin-panel .buttons {
+  display: flex;
+  justify-content: right;
+  margin-top: 30px;
+}
+.admin-panel .buttons button {
+  margin: 0 5px;
+}/*# sourceMappingURL=AdminPanel.css.map */

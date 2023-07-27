@@ -1,14 +1,14 @@
 import { initializeApp } from 'firebase/app'
-import { getStorage } from 'firebase/storage'
- 
+import { getFirestore } from '@firebase/firestore' 
+
 const firebaseConfig = {
-    apiKey: "AIzaSyAh0dp5xxaGTNBjN4S2Odu2ftWd0GRaTkA",
-    authDomain: "lollipops-14.firebaseapp.com",
-    projectId: "lollipops-14",
-    storageBucket: "lollipops-14.appspot.com",
-    messagingSenderId: "888614994088",
-    appId: "1:888614994088:web:55ba233a5d48c328e1429d"
-};
+    apiKey: "AIzaSyBHc3YKk9nghuOTs1PSggOQ9Fbt4YJRVb8",
+    authDomain: "lollipops-rustavi.firebaseapp.com",
+    projectId: "lollipops-rustavi",
+    storageBucket: "lollipops-rustavi.appspot.com",
+    messagingSenderId: "568260549407",
+    appId: "1:568260549407:web:7e080255435d86165cae2a"
+  };
 const app = initializeApp(firebaseConfig)
 
-export const storage = getStorage(app)
+export const db = getFirestore(app)
