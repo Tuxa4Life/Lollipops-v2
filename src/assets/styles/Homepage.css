@@ -25,6 +25,7 @@ main .first-row .header {
     width: 100%;
     text-align: center;
     z-index: 1;
+    margin: 0;
   }
 }
 main .first-row .header h1 {

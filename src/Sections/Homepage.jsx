@@ -18,7 +18,7 @@ const Homepage = () => {
 
             <section className="second-row">
                 <h2>რას გთავაზობთ?</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum optio debitis  quidem saepe consequatur!</p>
+                <p>გადაიღეთ მაღალი ხარისხის საბავშვო და საოჯახო ფოტოსესიები. შეინახეთ თქვენი მოგონებები სამუდამოდ. </p>
             </section>
 
             <section className="third-row">
