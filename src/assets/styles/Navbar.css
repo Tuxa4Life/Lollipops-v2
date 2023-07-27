@@ -61,7 +61,7 @@ nav .menu {
   right: -80%;
   background-color: #f2c3ff;
   z-index: 5;
-  display: none;
+  opacity: 0;
 }
 nav .menu .close {
   width: 90%;
@@ -90,18 +90,20 @@ nav .closeMenu {
 @keyframes slideMenu {
   from {
     right: -80%;
-    display: block;
+    opacity: 1;
   }
   to {
     right: 0;
+    opacity: 1;
   }
 }
 @keyframes closeMenu {
   from {
     right: 0;
+    opacity: 1;
   }
   to {
     right: -80%;
-    display: none;
+    opacity: 0;
   }
 }/*# sourceMappingURL=Navbar.css.map */
