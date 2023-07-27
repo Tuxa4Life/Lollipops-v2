@@ -69,6 +69,8 @@ nav {
         background-color: #f2c3ff;
         z-index: 5;
 
+        display: none;
+
 
         .close {
             width: 90%;
@@ -104,6 +106,7 @@ nav {
 @keyframes slideMenu {
     from {
         right: -80%;
+        display: block;
     }
     to {
         right: 0;
@@ -117,5 +120,6 @@ nav {
     }
     to {
         right: -80%;
+        display: none;
     }
 }
