@@ -20,10 +20,10 @@ nav .img img {
 }
 nav .alt {
   display: flex;
-  justify-content: right;
+  justify-content: space-evenly;
   align-items: center;
   height: 10vh;
-  width: 30%;
+  width: 50%;
   margin-right: 2%;
 }
 nav .alt p, nav .alt i {
@@ -32,4 +32,73 @@ nav .alt p, nav .alt i {
   font-weight: 600;
   color: rgb(247, 247, 247);
   cursor: pointer;
+  transition: 0.2s all;
+}
+nav .alt p:hover, nav .alt i:hover {
+  color: rgb(166, 71, 166);
+}
+@media (max-width: 850px) {
+  nav .alt {
+    display: none;
+  }
+}
+nav .bars {
+  font-size: 30px;
+  color: white;
+  margin-right: 20px;
+  display: none;
+}
+@media (max-width: 850px) {
+  nav .bars {
+    display: block;
+  }
+}
+nav .menu {
+  width: 80%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: -80%;
+  background-color: #f2c3ff;
+  z-index: 5;
+}
+nav .menu .close {
+  width: 90%;
+  height: 40px;
+  font-size: 25px;
+  color: rgb(156, 3, 167);
+  text-align: left;
+  margin: 20px;
+}
+nav .menu ul li {
+  color: white;
+  font-size: 18px;
+  margin: 8px 0;
+}
+nav .openMenu {
+  animation-name: slideMenu;
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+}
+nav .closeMenu {
+  animation-name: closeMenu;
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+}
+
+@keyframes slideMenu {
+  from {
+    right: -80%;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes closeMenu {
+  from {
+    right: 0;
+  }
+  to {
+    right: -80%;
+  }
 }/*# sourceMappingURL=Navbar.css.map */

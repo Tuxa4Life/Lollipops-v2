@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from '../assets/styles/Navbar.css'
 
 
 const Navbar = () => {
+    const [menu, setMenu] = useState(false)
+    
+    const toggleMenu = () => {
+        setMenu(!menu)
+    }
 
     return (
         <nav style={styles}>
@@ -11,7 +16,21 @@ const Navbar = () => {
             </div>
 
             <div className="alt">
+                <p>მთავარი</p>
+                <p>ფასები</p>
+                <p>გალერეა</p>
                 <i className="user icon"></i>
+            </div>
+
+            <i onClick={toggleMenu} className="bars icon"></i>
+
+            <div className={`menu ${menu ? 'openMenu' : 'closeMenu'}`}>
+                <i onClick={toggleMenu} className="close icon"></i>
+                <ul>
+                    <li>მთავარი</li>
+                    <li>ფასები</li>
+                    <li>გალერეა</li>
+                </ul>
             </div>
         </nav>
     )
