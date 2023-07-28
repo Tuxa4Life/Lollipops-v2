@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from '../assets/styles/Navbar.css'
 import AdminPanel from "./Components/AdminPanel";
-
+import Link from './Routes/Link';
 
 const Navbar = ({ setAdmin }) => {
     const [menu, setMenu] = useState(false)
@@ -22,9 +22,9 @@ const Navbar = ({ setAdmin }) => {
             </div>
 
             <div className="alt">
-                <p>მთავარი</p>
-                <p>ფასები</p>
-                <p>გალერეა</p>
+                <p><Link href={'/'}>მთავარი</Link></p>
+                <p><Link href={'/prices'}>ფასები</Link></p>
+                <p><Link href={'/gallery'}>გალერეა</Link></p>
                 <i onClick={toggleAdminPanel} className="user icon"></i>
             </div>
 
@@ -33,9 +33,9 @@ const Navbar = ({ setAdmin }) => {
             <div className={`menu ${menu ? 'openMenu' : 'closeMenu'}`}>
                 <i onClick={toggleMenu} className="close icon"></i>
                 <ul>
-                    <li>მთავარი</li>
-                    <li>ფასები</li>
-                    <li>გალერეა</li>
+                    <li><Link href={'/'}>მთავარი</Link></li>
+                    <li><Link href={'/prices'}>ფასები</Link></li>
+                    <li><Link href={'/gallery'}>გალერეა</Link></li>
                 </ul>
             </div> 
             {

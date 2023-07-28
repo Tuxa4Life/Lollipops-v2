@@ -36,6 +36,12 @@ footer .links li {
 footer .links li a {
   color: unset;
 }
+footer .links li a span {
+  transition: 0.3s all;
+}
+footer .links li a span:hover {
+  color: rgb(176, 0, 176);
+}
 footer .location {
   height: 90%;
   width: 60%;

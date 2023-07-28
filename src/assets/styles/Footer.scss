@@ -35,6 +35,12 @@ footer {
             margin:8px 0;
             a {
                 color: unset;
+                span {
+                    transition: .3s all;
+                }
+                span:hover {
+                    color: rgb(176, 0, 176);
+                }
             }
         }
     }
