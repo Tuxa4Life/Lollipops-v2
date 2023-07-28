@@ -33,12 +33,13 @@ main .first-row .header {
 }
 main .first-row .header h1 {
   color: #774785;
-  font-size: 48px;
+  font-size: 60px;
   padding: 0;
+  font-family: "Dancing Script", cursive;
 }
 main .first-row .header h3 {
   color: #BA90C6;
-  margin: 0, 5px;
+  margin: 0, 10px;
 }
 main .first-row .images {
   width: 50%;

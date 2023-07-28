@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from '../assets/styles/Homepage.css'
 import HomeImages from "./Components/HomeImages";
 import { db } from "../firebase";
-import {collection, getDocs, updateDoc, doc } from 'firebase/firestore'
+import {collection, getDocs } from 'firebase/firestore'
 import EditValues from "./Components/EditValues";
 
 const Homepage = ({ admin }) => {    
