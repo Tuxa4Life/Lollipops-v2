@@ -8,7 +8,7 @@ const AdminPanel = ({setAdmin, closeAdminPanel}) => {
     const confirmCreds = (e) => {
         e.preventDefault()
 
-        if (username == 'admin' && password == 'lollipops') {
+        if (username === 'admin' && password === 'lollipops') {
             setAdmin(true)
             closeAdminPanel()
         } else {
@@ -23,7 +23,7 @@ const AdminPanel = ({setAdmin, closeAdminPanel}) => {
                 <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
             </div>
             <div className="buttons">
-                <button type='submit' className="ui primary button">შესვლა</button>
+                <button type='submit' className="ui pink button">შესვლა</button>
                 <button type='button' onClick={closeAdminPanel} className="ui button">უკან</button>
             </div>
         </form>

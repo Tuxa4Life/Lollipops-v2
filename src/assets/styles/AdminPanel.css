@@ -3,8 +3,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
-  border: 2px black solid;
+  background-color: rgb(251, 212, 255);
+  border: 2px white solid;
   border-radius: 5px;
   z-index: 10;
   display: flex;

@@ -1,0 +1,14 @@
+.container {
+  margin: 10vh 0;
+}
+.container .card {
+  background-color: rgb(247, 216, 255);
+}
+.container .card .content hr {
+  border: none;
+  border-top: 2px rgb(231, 153, 255) solid;
+  border-radius: 1px;
+}
+.container .card .content em {
+  cursor: pointer;
+}/*# sourceMappingURL=Prices.css.map */

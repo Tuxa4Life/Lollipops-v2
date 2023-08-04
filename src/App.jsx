@@ -4,6 +4,8 @@ import styles from './assets/styles/App.css'
 import Navbar from "./Sections/Navbar";
 import Homepage from "./Sections/Homepage";
 import Footer from "./Sections/Footer";
+import Prices from "./Sections/Prices";
+
 import Route from "./Sections/Routes/Route";
 
 
@@ -15,11 +17,11 @@ const App = () => {
             <Navbar setAdmin={setAdmin}/>
 
             <Route path={'/'}>
-                <Homepage admin={admin}/>
+                <Homepage admin={admin} />
             </Route>
 
             <Route path={'/prices'}>
-                
+                <Prices admin={admin} />
             </Route>
 
             <Route path={'/gallery'}>

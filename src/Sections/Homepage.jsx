@@ -12,6 +12,7 @@ const Homepage = ({ admin }) => {
 
     const [editVal, setEditVal] = useState(null)
     const [editId, setEditId] = useState(null)
+    const [rerender, setRerender] = useState(true)
 
     const valuesRef = collection(db, 'homepage')
     useEffect(() => {
@@ -28,7 +29,7 @@ const Homepage = ({ admin }) => {
         }
 
         getValues()
-    }, [admin])
+    }, [admin, rerender])
 
     const toggleEditPanel = (val, id) => {
         setEditVal(val)
@@ -39,12 +40,12 @@ const Homepage = ({ admin }) => {
     return (
         <main style={styles} className="home">
 
-            { editPanel ? <EditValues oldData={editVal} closeCard={() => setEditPanel(false)} id={editId}/> : null }
+            { editPanel ? <EditValues rerender={() => setRerender(!rerender)} parentId={'homepage'} oldData={editVal} closeCard={() => setEditPanel(false)} id={editId}/> : null }
 
             <section className="first-row">
                 <div className="header">
-                    <h1>{values.length ? values[0].title : ''} <em onClick={() => toggleEditPanel(values.length ? values[0].title : '', values[0].id)} style={{display: edit}}><i className="edit icon"></i></em></h1>
-                    <h3>{values.length ? values[1].title : ''} <em onClick={() => toggleEditPanel(values.length ? values[1].title : '', values[1].id)} style={{display: edit}}><i className="edit icon"></i></em></h3>
+                    <h1>{values.length ? values[0].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[0].val : '', values[0].id)} style={{display: edit}}><i className="edit icon"></i></em></h1>
+                    <h3>{values.length ? values[1].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[1].val : '', values[1].id)} style={{display: edit}}><i className="edit icon"></i></em></h3>
                 </div>
                 <div className="images">
                     <HomeImages />
@@ -52,30 +53,30 @@ const Homepage = ({ admin }) => {
             </section>
 
             <section className="second-row">
-                <h2>{values.length ? values[2].title : ''} <em onClick={() => toggleEditPanel(values.length ? values[2].title : '', values[2].id)} style={{display: edit}}><i className="edit icon"></i></em></h2>
-                <p>{values.length ? values[3].title : ''} <em onClick={() => toggleEditPanel(values.length ? values[3].title : '', values[3].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
+                <h2>{values.length ? values[2].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[2].val : '', values[2].id)} style={{display: edit}}><i className="edit icon"></i></em></h2>
+                <p>{values.length ? values[3].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[3].val : '', values[3].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
             </section>
 
             <section className="third-row">
-                <h2>{values.length ? values[4].title : ''} <em onClick={() => toggleEditPanel(values.length ? values[4].title : '', values[4].id)} style={{display: edit}}><i className="edit icon"></i></em></h2>
+                <h2>{values.length ? values[4].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[4].val : '', values[4].id)} style={{display: edit}}><i className="edit icon"></i></em></h2>
                 <div className="icon-wrapper">
                     <div className="item-one">
                         <img src="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Homepage%2F1391391.png?alt=media&token=be578ea8-eedb-4675-94a1-a14d2b528733" alt="Image not found" />
-                        <p>{values.length ? values[5].title : ''} <em onClick={() => toggleEditPanel(values.length ? values[5].title : '', values[5].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
+                        <p>{values.length ? values[5].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[5].val : '', values[5].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
                     </div>
                     <div className="item-two">
                         <img src="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Homepage%2Fcozy-icon-12.png?alt=media&token=bbbc9ebc-e567-443a-b35b-4d86d11d954d" alt="Image not found" />
-                        <p>{values.length ? values[6].title : ''} <em onClick={() => toggleEditPanel(values.length ? values[6].title : '', values[6].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
+                        <p>{values.length ? values[6].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[6].val : '', values[6].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
                     </div>
                     <div className="item-three">
                         <img src="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Homepage%2Fcamera-removebg-preview.png?alt=media&token=5ba14d03-25b0-49cd-b673-6b803b6eba12" alt="" />
-                        <p>{values.length ? values[7].title : ''}  <em onClick={() => toggleEditPanel(values.length ? values[7].title : '', values[7].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
+                        <p>{values.length ? values[7].val : ''}  <em onClick={() => toggleEditPanel(values.length ? values[7].val : '', values[7].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
                     </div>
                 </div>
             </section>
 
             <section className="image-container">
-                <h2>{values.length ? values[8].title : ''} <em onClick={() => toggleEditPanel(values.length ? values[8].title : '', values[8].id)} style={{display: edit}}><i className="edit icon"></i></em></h2>
+                <h2>{values.length ? values[8].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[8].val : '', values[8].id)} style={{display: edit}}><i className="edit icon"></i></em></h2>
                 <div className="first-images img-wrapper">
                     <img src="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Homepage%2FGallery%2F1%20(1).jpg?alt=media&token=33cc4e14-85ac-4b90-8c5a-1726e88104a0" alt="Image not found" />
                     <img src="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Homepage%2FGallery%2F2%20(1).jpg?alt=media&token=649a4d41-6ecc-4ac2-b03b-d0fac4d4381e" alt="Image not found" />
