@@ -1,0 +1,27 @@
+.upload-card {
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px black solid;
+  border-radius: 5px;
+}
+.upload-card .buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: right;
+}
+.upload-card .field .custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px;
+  margin-top: 3px;
+}/*# sourceMappingURL=ImageUpload.css.map */

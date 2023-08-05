@@ -17,7 +17,7 @@ const Prices = ({ admin }) => {
         } else {
             setWrap('three')
         }
-    }, []);
+    }, [deviceWidth]);
 
 
     const [values, setValuesA] = useState([])
@@ -44,7 +44,7 @@ const Prices = ({ admin }) => {
         }
 
         getValues()
-    }, [admin, rerender])
+    }, [admin, rerender, valuesRef])
 
     const toggleEditPanel = (val, id) => {
         setEditVal(val)
@@ -60,7 +60,7 @@ const Prices = ({ admin }) => {
                 <div className="column">
                     <div className="ui fluid card">
                         <div className="image">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Prices%2Fprices%20(1).jpg?alt=media&token=ef9f3ada-bce0-482c-a8ed-857313efc8c3" />
+                            <img alt="loading" src="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Prices%2Fprices%20(1).jpg?alt=media&token=ef9f3ada-bce0-482c-a8ed-857313efc8c3" />
                         </div>
                         <div className="content">
                             <p className="header">{values.length ? values[0].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[0].val : '', values[0].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
@@ -73,7 +73,7 @@ const Prices = ({ admin }) => {
                 <div className="column">
                     <div className="ui fluid card">
                         <div className="image">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Prices%2Fprices%20(2).jpg?alt=media&token=e222543c-5acd-4d88-89e6-e9af65f793ed" />
+                            <img alt="loading" src="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Prices%2Fprices%20(2).jpg?alt=media&token=e222543c-5acd-4d88-89e6-e9af65f793ed" />
                         </div>
                         <div className="content">
                             <p className="header">{values.length ? values[2].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[2].val : '', values[2].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
@@ -85,7 +85,7 @@ const Prices = ({ admin }) => {
                 <div className="column">
                     <div className="ui fluid card">
                         <div className="image">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Prices%2Fprices%20(3).jpg?alt=media&token=fd861ce9-e97c-4945-96db-1c890886fe5e" />
+                            <img alt="loading" src="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Prices%2Fprices%20(3).jpg?alt=media&token=fd861ce9-e97c-4945-96db-1c890886fe5e" />
                         </div>
                         <div className="content">
                             <p className="header">{values.length ? values[4].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[4].val : '', values[4].id)} style={{display: edit}}><i className="edit icon"></i></em></p>

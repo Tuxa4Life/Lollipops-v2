@@ -7,6 +7,7 @@ import Footer from "./Sections/Footer";
 import Prices from "./Sections/Prices";
 
 import Route from "./Sections/Routes/Route";
+import Gallery from "./Sections/Gallery";
 
 
 const App = () => {
@@ -25,9 +26,9 @@ const App = () => {
             </Route>
 
             <Route path={'/gallery'}>
-                
+                <Gallery admin={admin}/>
             </Route>
-
+            
             <Footer />
         </div>
     )

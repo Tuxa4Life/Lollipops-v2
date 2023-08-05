@@ -1,0 +1,15 @@
+.imagecontainer {
+  margin-top: 10vh !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagecontainer img {
+  width: 25% !important;
+  margin: 10px;
+}
+@media (max-width: 700px) {
+  .imagecontainer img {
+    width: 70% !important;
+  }
+}/*# sourceMappingURL=ImageContainer.css.map */
