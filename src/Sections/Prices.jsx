@@ -67,6 +67,8 @@ const Prices = ({ admin }) => {
                             <div className="subtext"></div>
                             <hr />
                             <p>{values.length ? values[1].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[1].val : '', values[1].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
+                            <p>{values.length ? values[6].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[6].val : '', values[6].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
+                            <p>{values.length ? values[7].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[7].val : '', values[7].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
                         </div>
                     </div>
                 </div>
@@ -79,6 +81,8 @@ const Prices = ({ admin }) => {
                             <p className="header">{values.length ? values[2].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[2].val : '', values[2].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
                             <hr />
                             <p>{values.length ? values[3].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[3].val : '', values[3].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
+                            <p>{values.length ? values[8].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[8].val : '', values[8].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
+                            <p>{values.length ? values[9].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[9].val : '', values[9].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
                         </div>
                     </div>
                 </div>
@@ -91,6 +95,8 @@ const Prices = ({ admin }) => {
                             <p className="header">{values.length ? values[4].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[4].val : '', values[4].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
                             <hr />
                             <p>{values.length ? values[5].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[5].val : '', values[5].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
+                            <p>{values.length ? values[10].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[10].val : '', values[10].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
+                            <p>{values.length ? values[11].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[11].val : '', values[11].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
                         </div>
                     </div>
                 </div>
