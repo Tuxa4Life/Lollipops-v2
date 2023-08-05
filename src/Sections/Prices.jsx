@@ -5,6 +5,21 @@ import {collection, getDocs } from 'firebase/firestore'
 import EditValues from "./Components/EditValues";
 
 const Prices = ({ admin }) => {
+    const [wrap, setWrap] = useState('three')
+    const [deviceWidth, setDeviceWidth] = useState(window.innerWidth);
+
+
+    useEffect(() => {
+        setDeviceWidth(window.innerWidth)
+
+        if (deviceWidth <= 750) {
+            setWrap('one')
+        } else {
+            setWrap('three')
+        }
+    }, []);
+
+
     const [values, setValuesA] = useState([])
     const [edit, setEdit] = useState('none')
     const [editPanel, setEditPanel] = useState(false)
@@ -41,39 +56,39 @@ const Prices = ({ admin }) => {
         <div style={styles} className="container ui">
             { editPanel ? <EditValues rerender={() => setRerender(!rerender)} parentId={'prices'} oldData={editVal} closeCard={() => setEditPanel(false)} id={editId}/> : null }
 
-            <div class="ui three column grid">
-                <div class="column">
-                    <div class="ui fluid card">
-                        <div class="image">
+            <div className={`ui ${wrap} column grid`}>
+                <div className="column">
+                    <div className="ui fluid card">
+                        <div className="image">
                             <img src="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Prices%2Fprices%20(1).jpg?alt=media&token=ef9f3ada-bce0-482c-a8ed-857313efc8c3" />
                         </div>
-                        <div class="content">
-                            <p class="header">{values.length ? values[0].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[0].val : '', values[0].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
+                        <div className="content">
+                            <p className="header">{values.length ? values[0].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[0].val : '', values[0].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
                             <div className="subtext"></div>
                             <hr />
                             <p>{values.length ? values[1].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[1].val : '', values[1].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
                         </div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="ui fluid card">
-                        <div class="image">
+                <div className="column">
+                    <div className="ui fluid card">
+                        <div className="image">
                             <img src="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Prices%2Fprices%20(2).jpg?alt=media&token=e222543c-5acd-4d88-89e6-e9af65f793ed" />
                         </div>
-                        <div class="content">
-                            <p class="header">{values.length ? values[2].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[2].val : '', values[2].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
+                        <div className="content">
+                            <p className="header">{values.length ? values[2].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[2].val : '', values[2].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
                             <hr />
                             <p>{values.length ? values[3].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[3].val : '', values[3].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
                         </div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="ui fluid card">
-                        <div class="image">
+                <div className="column">
+                    <div className="ui fluid card">
+                        <div className="image">
                             <img src="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Prices%2Fprices%20(3).jpg?alt=media&token=fd861ce9-e97c-4945-96db-1c890886fe5e" />
                         </div>
-                        <div class="content">
-                            <p class="header">{values.length ? values[4].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[4].val : '', values[4].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
+                        <div className="content">
+                            <p className="header">{values.length ? values[4].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[4].val : '', values[4].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
                             <hr />
                             <p>{values.length ? values[5].val : ''} <em onClick={() => toggleEditPanel(values.length ? values[5].val : '', values[5].id)} style={{display: edit}}><i className="edit icon"></i></em></p>
                         </div>

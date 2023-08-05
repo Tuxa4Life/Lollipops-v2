@@ -28,7 +28,7 @@ const EditValues = ({ oldData, closeCard, id, parentId, rerender }) => {
             padding: '10px', border: '1px black solid', borderRadius: '5px'
         }} onSubmit={updateValue}>
             <div className="ui input">
-                <input type="text" value={inputVal} onChange={e => setInputVal(e.target.value)}/>
+                <textarea type="text" style={{width: '300px', height: '300px', border: '1px black solid'}} value={inputVal} onChange={e => setInputVal(e.target.value)}/>
             </div>
 
             <div className="buttons" style={{
