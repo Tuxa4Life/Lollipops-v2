@@ -5,7 +5,7 @@ import { storage } from "../../firebase";
 import styles from '../../assets/styles/ImageContainer.css'
 import Image from "./Image";
 
-const ImageContainer = ({ rerender }) => {
+const ImageContainer = ({ rerender, admin }) => {
     const [imageUrls, setImageUrls] = useState([])
 
     const imagesListRef = ref(storage, "Gallery/")
@@ -27,7 +27,7 @@ const ImageContainer = ({ rerender }) => {
     return (
         <div styles={styles} className="ui three column grid imagecontainer">
             {imageUrls.map((url, i) => {
-                return <Image key={i} url={url}/>
+                return <Image key={i} url={url} admin={admin}/>
             })}
         </div>
     )

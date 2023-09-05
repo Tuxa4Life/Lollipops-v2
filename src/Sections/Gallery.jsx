@@ -24,7 +24,7 @@ const Gallery = ({ admin }) => {
                 <i className="upload icon"></i>
             </button>
 
-            <ImageContainer rerender={rerender}/>
+            <ImageContainer rerender={rerender} admin={admin}/>
         </div>
     )
 }

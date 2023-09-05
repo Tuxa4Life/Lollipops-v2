@@ -4,12 +4,28 @@
   align-items: center;
   justify-content: center;
 }
-.imagecontainer img {
+.imagecontainer .img-wrapper {
   width: 25% !important;
   margin: 10px;
+  padding: 0;
+  position: relative;
 }
 @media (max-width: 700px) {
-  .imagecontainer img {
+  .imagecontainer .img-wrapper {
     width: 70% !important;
   }
+}
+.imagecontainer .img-wrapper img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+.imagecontainer .img-wrapper .times {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
 }/*# sourceMappingURL=ImageContainer.css.map */

@@ -77,14 +77,31 @@ nav .menu ul li {
   margin: 8px 0;
 }
 nav .openMenu {
-  animation-name: slideMenu;
-  animation-duration: 0.7s;
-  animation-fill-mode: both;
+  -webkit-animation-name: slideMenu;
+          animation-name: slideMenu;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 nav .closeMenu {
-  animation-name: closeMenu;
-  animation-duration: 0.7s;
-  animation-fill-mode: both;
+  -webkit-animation-name: closeMenu;
+          animation-name: closeMenu;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideMenu {
+  from {
+    right: -80%;
+    opacity: 1;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
 }
 
 @keyframes slideMenu {
@@ -95,6 +112,16 @@ nav .closeMenu {
   to {
     right: 0;
     opacity: 1;
+  }
+}
+@-webkit-keyframes closeMenu {
+  from {
+    right: 0;
+    opacity: 1;
+  }
+  to {
+    right: -80%;
+    opacity: 0;
   }
 }
 @keyframes closeMenu {

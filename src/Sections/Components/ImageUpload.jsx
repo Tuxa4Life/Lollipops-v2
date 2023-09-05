@@ -32,7 +32,7 @@ const ImageUpload = ({ closeCard, triggerRender }) => {
                 <input onChange={e => setFiles(e.target.files)} className="custom-file-upload" type="file" name="upload" multiple/> 
             </div>
             <div className="buttons">
-                <button onClick={uploadImage} className={`ui pink button ${isLoading ? 'loading' : ''}`}>Upload</button>
+                <button onClick={uploadImage} className={`ui pink button ${isLoading ? 'loading disabled' : ''}`}>Upload</button>
                 <button onClick={closeCard} className="ui button">Close</button>
             </div>
         </div>
