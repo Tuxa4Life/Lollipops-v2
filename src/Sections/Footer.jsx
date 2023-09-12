@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from '../assets/styles/Footer.css'
+import PopupImg from "./Components/PopupImg";
 
 const Footer = () => {
+    const [popup, setPopup] = useState(false)
+
+    
     return (
         <footer style={styles}>
+            { popup ? <PopupImg src={'https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Footer%2FLocation.jpg?alt=media&token=929552e1-ef88-421b-8286-8627e4dfc894'} closePopup={() => setPopup(false)}/> : null }
+
             <div className="links">
                 <h2>დაგვიკავშირდით:</h2>
                 <ul>
@@ -12,7 +18,7 @@ const Footer = () => {
                 </ul>
             </div>
             <div className="location">
-                <a href="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Footer%2FLocation.jpg?alt=media&token=929552e1-ef88-421b-8286-8627e4dfc894" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Footer%2FLocation.jpg?alt=media&token=929552e1-ef88-421b-8286-8627e4dfc894" alt="Image not found" /></a>
+                <img src="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Footer%2FLocation.jpg?alt=media&token=929552e1-ef88-421b-8286-8627e4dfc894" alt="Image not found" onClick={() => setPopup(true)}/>
                 <p>ქალაქ რუსთავი, მესხიშვილის 9</p>
             </div>
             <div className="credit">

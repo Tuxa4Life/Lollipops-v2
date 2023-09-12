@@ -56,17 +56,14 @@ footer .location {
     width: 100%;
   }
 }
-footer .location a {
+footer .location img {
   width: 40%;
+  border-radius: 5px;
 }
 @media (max-width: 529px) {
-  footer .location a {
+  footer .location img {
     width: 80%;
   }
-}
-footer .location a img {
-  width: 100%;
-  border-radius: 5px;
 }
 footer .location p {
   margin: 5px 0;
