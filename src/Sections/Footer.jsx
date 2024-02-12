@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
             <div className="location">
                 <img src="https://firebasestorage.googleapis.com/v0/b/lollipops-rustavi.appspot.com/o/Footer%2FLocation.jpg?alt=media&token=929552e1-ef88-421b-8286-8627e4dfc894" alt="Image not found" onClick={() => setPopup(true)}/>
-                <p>ქალაქ რუსთავი, მესხიშვილის 9</p>
+                <p>ქალაქ რუსთავი, მესხიშვილის 9დ</p>
             </div>
             <div className="credit">
                 Tuxa4Life © | <a style={{color: 'unset'}} href="https://github.com/Tuxa4Life" target="_blank"><i className="github icon"></i></a>

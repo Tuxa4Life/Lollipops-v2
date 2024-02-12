@@ -25,6 +25,7 @@ const Navbar = ({ setAdmin }) => {
                 <p><Link href={'/'}>მთავარი</Link></p>
                 <p><Link href={'/prices'}>ფასები</Link></p>
                 <p><Link href={'/gallery'}>გალერეა</Link></p>
+                <p><Link href={'/albums'}>ალბომები</Link></p>
                 <i onClick={toggleAdminPanel} className="user icon"></i>
             </div>
 
@@ -36,6 +37,7 @@ const Navbar = ({ setAdmin }) => {
                     <li><Link href={'/'}>მთავარი</Link></li>
                     <li><Link href={'/prices'}>ფასები</Link></li>
                     <li><Link href={'/gallery'}>გალერეა</Link></li>
+                    <li><Link href={'/albums'}>ალბომები</Link></li>
                 </ul>
             </div> 
             {

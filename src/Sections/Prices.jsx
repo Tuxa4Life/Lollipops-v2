@@ -35,6 +35,7 @@ const Prices = ({ admin }) => {
             const data = await getDocs(valuesRef)
             
             setValuesA(data.docs.map(doc => ({...doc.data(), id: doc.id})))
+            console.log(data.data)
         }
 
         if (admin) {
@@ -44,7 +45,7 @@ const Prices = ({ admin }) => {
         }
 
         getValues()
-    }, [admin, rerender, valuesRef])
+    }, [admin, rerender])
 
     const toggleEditPanel = (val, id) => {
         setEditVal(val)

@@ -3,6 +3,7 @@ import styles from './assets/styles/App.css'
 
 import Navbar from "./Sections/Navbar";
 import Homepage from "./Sections/Homepage";
+import Albums from "./Sections/Albums";
 import Footer from "./Sections/Footer";
 import Prices from "./Sections/Prices";
 
@@ -27,6 +28,10 @@ const App = () => {
 
             <Route path={'/gallery'}>
                 <Gallery admin={admin}/>
+            </Route>
+
+            <Route path={'/albums'}>
+                <Albums admin={admin}/>
             </Route>
             
             <Footer />
