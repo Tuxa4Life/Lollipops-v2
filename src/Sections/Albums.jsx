@@ -3,6 +3,7 @@ import Ei from "./Components/EditIcon";
 import EditValues from "./Components/EditValues";
 import { db } from "../firebase";
 import {collection, getDocs } from 'firebase/firestore'
+import UploadCovers from "./Components/UploadCovers";
 
 const Albums = ({ admin }) => {
     const [values, setValues] = useState([])
@@ -12,6 +13,8 @@ const Albums = ({ admin }) => {
 
     const [textId, setTextId] = useState('')
     const [pranetId, setParentId] = useState('')
+
+    const [uploadCovers, setUploadCovers] = useState(false)
 
     const [rerender, setRerender] = useState(false)
 
@@ -61,6 +64,11 @@ const Albums = ({ admin }) => {
             <div className="card" style={{width: '40%', minWidth: '300px', backgroundColor: 'rgb(247, 216, 255)', margin: '50px'}}>
                 <div className="content">
                     <h1>ყდები</h1>
+                    { admin ? 
+                    
+                    <button onClick={() => setUploadCovers(!uploadCovers)} class="ui primary labeled icon button"><i class="upload icon"></i>Upload</button>
+                        
+                    : null }
                     <div className="description">
                     {values.length ? values[5].val : ''} {admin ? <em onClick={() => { updateState( values[5].id) }}><i className="icon edit"></i></em> : null}
                     </div>
@@ -90,6 +98,9 @@ const Albums = ({ admin }) => {
                     </div>
                 </div>
             </div>
+
+
+            { uploadCovers ? <UploadCovers /> : null }
         </div>
     )
 }
